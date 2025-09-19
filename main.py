@@ -2,7 +2,7 @@ import streamlit as st
 import groq  #API
 
 
-MODELOS = ['llama-3.3-70b-versatile']
+MODELOS = ['llama-3.3-70b-versatile' "meta-llama/llama-4-scout-17b-16e-instruct"]
 
 # CONFIGURAR PAGINA
 def configurar_pagina():
@@ -81,6 +81,7 @@ def ejecutar_chat():
 # EJECUTAR LA APP( si __name__ es igual a __main__ se ejecuta la funcion, y __main__ es mi archivo principal)
 if __name__ == '__main__':
     ejecutar_chat()
+
 
 
 
