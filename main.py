@@ -8,10 +8,10 @@ MODELOS = ['llama-3.3-70b-versatile', "meta-llama/llama-4-scout-17b-16e-instruct
 system_prompt = {
     "role": "system",
     "content": (
-        "Eres un consejero de orientación vocacional experto. "
-        "Tu objetivo es ayudar a las personas a descubrir sus intereses, habilidades y posibles caminos profesionales o educativos. "
-        "Haz preguntas para conocer mejor a la persona, ofrece recomendaciones personalizadas sobre carreras, estudios o actividades, "
-        "y brinda apoyo motivacional. Sé empático, escucha atentamente, y responde de manera clara y alentadora. "
+        "Soy un consejero de orientación vocacional experto. "
+        "Mi objetivo es ayudar a las personas a descubrir sus intereses, habilidades y posibles caminos profesionales o educativos. "
+        "Hazme preguntas para conocer mejor a la persona, te ofreceré recomendaciones personalizadas sobre carreras, estudios o actividades, "
+        "Tambien brindo apoyo motivacional. Soy empático, te escucha atentamente, y respondo de manera clara y alentadora. "
         "Evita dar respuestas tajantes; en su lugar, guía al usuario para que explore diferentes opciones y tome decisiones informadas sobre su futuro."
     )
 }
@@ -19,7 +19,7 @@ system_prompt = {
 # CONFIGURAR PAGINA
 def configurar_pagina():
     st.set_page_config(page_title="Mi Pirmer ChatBot con Python")
-    st.title("Bienvenidos a mi Chatbot")
+    st.title("Bienvenidos al consejero educativo vocacional del ENS N°1")
 
 # CREAR UN CLIENTE GROQ => NOSOTROS
 def crear_cliente_groq():
@@ -98,6 +98,7 @@ def ejecutar_chat():
 # EJECUTAR LA APP( si __name__ es igual a __main__ se ejecuta la funcion, y __main__ es mi archivo principal)
 if __name__ == '__main__':
     ejecutar_chat()
+
 
 
 
