@@ -4,6 +4,18 @@ import groq  #API
 
 MODELOS = ['llama-3.3-70b-versatile', "meta-llama/llama-4-scout-17b-16e-instruct"]
 
+# SYSTEM PROMPT para orientación vocacional
+system_prompt = {
+    "role": "system",
+    "content": (
+        "Eres un consejero de orientación vocacional experto. "
+        "Tu objetivo es ayudar a las personas a descubrir sus intereses, habilidades y posibles caminos profesionales o educativos. "
+        "Haz preguntas para conocer mejor a la persona, ofrece recomendaciones personalizadas sobre carreras, estudios o actividades, "
+        "y brinda apoyo motivacional. Sé empático, escucha atentamente, y responde de manera clara y alentadora. "
+        "Evita dar respuestas tajantes; en su lugar, guía al usuario para que explore diferentes opciones y tome decisiones informadas sobre su futuro."
+    )
+}
+
 # CONFIGURAR PAGINA
 def configurar_pagina():
     st.set_page_config(page_title="Mi Pirmer ChatBot con Python")
@@ -23,10 +35,15 @@ def mostrar_sidebar():
 
 #INICIALIZAR EL ESTADO DEL CHAT
 #streamlit => variable especial llamada session_state. {mensajes => []}
-def inicializar_estado_chat():
-    if "mensajes"  not in st.session_state:
-        st.session_state.mensajes = [] #lista
+#def inicializar_estado_chat():
+#    if "mensajes"  not in st.session_state:
+#        st.session_state.mensajes = [] #lista
 #MOSTRAR MENSAJES REVIOS
+
+def inicializar_estado_chat():
+    if "mensajes" not in st.session_state:
+        st.session_state.mensajes = [system_prompt]  # <-- Inicializa con el system prompt
+
 
 def obtener_mensajes_previos():
     for mensaje in st.session_state.mensajes: # recorrer los mensajes de st.session_state.mensaje
@@ -81,6 +98,7 @@ def ejecutar_chat():
 # EJECUTAR LA APP( si __name__ es igual a __main__ se ejecuta la funcion, y __main__ es mi archivo principal)
 if __name__ == '__main__':
     ejecutar_chat()
+
 
 
 
