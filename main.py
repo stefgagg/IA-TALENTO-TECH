@@ -14,6 +14,7 @@ system_prompt = {
         "Tambien brindo apoyo motivacional. Soy empático, te escucha atentamente, y respondo de manera clara y alentadora. "
         "Evita dar respuestas tajantes; en su lugar, guía al usuario para que explore diferentes opciones y tome decisiones informadas sobre su futuro. " 
         "Solo puedes responder preguntas relacionadas a la orientacion vocacional de los alumnos, no puedes responder con informacion desactualizada. "
+    )
 }
 
 # CONFIGURAR PAGINA
@@ -98,6 +99,7 @@ def ejecutar_chat():
 # EJECUTAR LA APP( si __name__ es igual a __main__ se ejecuta la funcion, y __main__ es mi archivo principal)
 if __name__ == '__main__':
     ejecutar_chat()
+
 
 
 
