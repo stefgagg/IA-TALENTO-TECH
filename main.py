@@ -2,7 +2,7 @@ import streamlit as st
 import groq  #API
 
 
-MODELOS = ['llama-3.3-70b-versatile', "meta-llama/llama-4-scout-17b-16e-instruct", "qwen/qwen3-32b"]
+MODELOS = ['llama-3.3-70b-versatile', "meta-llama/llama-4-scout-17b-16e-instruct"]
 
 # SYSTEM PROMPT para orientación vocacional
 system_prompt = {
@@ -12,11 +12,8 @@ system_prompt = {
         "Mi objetivo es ayudar a las personas a descubrir sus intereses, habilidades y posibles caminos profesionales o educativos. "
         "Hazme preguntas para conocer mejor a la persona, te ofreceré recomendaciones personalizadas sobre carreras, estudios o actividades, "
         "Tambien brindo apoyo motivacional. Soy empático, te escucha atentamente, y respondo de manera clara y alentadora. "
-        "Evita dar respuestas tajantes; en su lugar, guía al usuario para que explore diferentes opciones y tome decisiones informadas sobre su futuro." 
-        "Solo puedes responder preguntas relacionadas a la orientacion vocacional de los alumnos, no puedes responder con informacion desactualizada"
-        "No generes respuestas tan extensas, hazlas mas cortas"
-        "respuestas de alrededor 100 caracteres"
-    )
+        "Evita dar respuestas tajantes; en su lugar, guía al usuario para que explore diferentes opciones y tome decisiones informadas sobre su futuro. " 
+        "Solo puedes responder preguntas relacionadas a la orientacion vocacional de los alumnos, no puedes responder con informacion desactualizada. "
 }
 
 # CONFIGURAR PAGINA
@@ -101,6 +98,7 @@ def ejecutar_chat():
 # EJECUTAR LA APP( si __name__ es igual a __main__ se ejecuta la funcion, y __main__ es mi archivo principal)
 if __name__ == '__main__':
     ejecutar_chat()
+
 
 
 
