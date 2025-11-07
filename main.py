@@ -25,7 +25,7 @@ def configurar_pagina():
 
 # CREAR UN CLIENTE GROQ => NOSOTROS
 def crear_cliente_groq():
-    groq_api_key = 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 
+    groq_api_key = "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"
     return groq.Groq(api_key=groq_api_key)
     
 # MOSTRAR LA BARRA LATERAL 
@@ -100,6 +100,7 @@ def ejecutar_chat():
 # EJECUTAR LA APP( si __name__ es igual a __main__ se ejecuta la funcion, y __main__ es mi archivo principal)
 if __name__ == '__main__':
     ejecutar_chat()
+
 
 
 
